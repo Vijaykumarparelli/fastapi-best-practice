@@ -1,0 +1,28 @@
+from urllib.parse import quote_plus
+
+from pydantic_settings import BaseSettings, SettingsConfigDict
+
+
+class _AppSettings(BaseSettings):
+    DB_HOST: str
+    DB_PORT: str
+    DB_USER: str
+    DB_PASSWORD: str
+    DB_NAME: str
+
+    JWT_SECRET: str
+    JWT_ALGO: str
+
+    REDIS_HOST: str
+    REDIS_PORT: int
+
+    model_config = SettingsConfigDict(
+        env_file=".env", extra="ignore", case_sensitive=True, env_ignore_empty=True
+    )
+
+    @property
+    def db_url(self):
+        return f"mysql+asyncmy://{quote_plus(self.DB_USER)}:{quote_plus(self.DB_PASSWORD)}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
+
+
+settings = _AppSettings()

@@ -1,0 +1,51 @@
+[project]
+name = "fastapi-best-practice"
+version = "0.1.0"
+description = "FastAPI best practices project structure with SQLModel, async MySQL, Alembic migrations, JWT authentication and Redis token blacklist."
+readme = "README.md"
+requires-python = ">=3.14"
+authors = [{ name = "Vijaykumar Parelli" }]
+keywords = [
+    "fastapi",
+    "fastapi-best-practices",
+    "fastapi-project-structure",
+    "fastapi-template",
+    "sqlmodel",
+    "alembic",
+    "alembic-migrations",
+    "mysql",
+    "async",
+    "jwt-authentication",
+    "redis",
+    "oauth2",
+    "pydantic",
+    "scalar",
+]
+classifiers = [
+    "Framework :: FastAPI",
+    "Framework :: Pydantic :: 2",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Internet :: WWW/HTTP :: HTTP Servers",
+    "Topic :: Database",
+    "Typing :: Typed",
+]
+dependencies = [
+    "alembic>=1.20.0",
+    "asyncmy>=0.2.15",
+    "fastapi>=0.142.2",
+    "pwdlib[argon2]>=0.3.1",
+    "pydantic-settings>=2.15.0",
+    "pydantic[email]>=2.13.5",
+    "pyjwt>=2.15.1",
+    "python-multipart>=0.0.32",
+    "redis[hiredis]>=8.1.0",
+    "scalar-fastapi>=1.9.1",
+    "sqlmodel>=0.0.47",
+    "uvicorn>=0.54.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/Vijaykumarparelli/fastapi-best-practice"
+Repository = "https://github.com/Vijaykumarparelli/fastapi-best-practice"
+Issues = "https://github.com/Vijaykumarparelli/fastapi-best-practice/issues"
